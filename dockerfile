@@ -1,5 +1,5 @@
 # pull base image
-FROM node:14.13.1-buster-slim
+FROM node:18-buster-slim
 
 # set our node environment, either development or production
 # defaults to production, compose overrides this to development on build and run
@@ -27,7 +27,7 @@ RUN npm install
 # copy in our source code last, as it changes the most
 WORKDIR /opt/influx-app/app
 # for development, we bind mount volumes; comment out for production
-COPY ./influx-app . .
+COPY ./influx-app .
 
 ENTRYPOINT ["npm", "run"]
 CMD ["web"]

@@ -48,3 +48,19 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+------------------------------------
+Docker Info: 
+
+Command: docker compose build
+Behavior: Builds docker image
+
+Command: docker compose up
+Behavior: Runs the containers in the foreground, attaching the terminal to the container's output. You can see the logs and interact with the container directly.
+Stopping: To stop the containers, you would use CTRL + C in the terminal where they are running. This will shut down all services defined in the docker-compose.yml file.
+Use Case: Useful for debugging or when you want to monitor logs and see real-time output from the services
+
+Command: docker compose up -d
+Behavior: Runs the containers in the background (detached), freeing up the terminal for other tasks. You won’t see the logs in the terminal unless you explicitly check them with docker-compose logs.
+Stopping: You stop the containers with docker-compose down or docker-compose stop.
+Use Case: Ideal for running services in the background, such as long-running tasks or services that don't need real-time monitoring.
