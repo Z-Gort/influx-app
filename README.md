@@ -1,4 +1,5 @@
 **Influx App!**
+**(In the process of porting from Cornell Github)**
 
 To setup:
 1. "docker compose up --build" in root directory
